@@ -1,0 +1,24 @@
+package com.java.dojo.CyberDojo;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.Map;
+import java.util.stream.Stream;
+
+import org.junit.Test;
+
+public class HikingTheDoors {
+
+	@Test
+	public void hikerVisitsAllTheDoors() {
+		HikerGame hikerGame = new HikerGame();
+		Map<Integer,Boolean> doors = hikerGame.startThePasses();
+		boolean allDoorsOpen = isAllDoorsOpen(doors);
+		assertTrue(allDoorsOpen);
+	}
+
+	private boolean isAllDoorsOpen(Map<Integer, Boolean> doors) {
+		return !doors.containsValue(false);
+	}
+
+}

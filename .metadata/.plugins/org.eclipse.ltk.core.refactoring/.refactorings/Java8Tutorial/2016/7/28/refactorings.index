@@ -1,0 +1,7 @@
+1467896971825	Rename local variable 'i'
+1467966128533	Extract method 'initialize'
+1468058960238	Rename field 'count'
+1468058979651	Rename method 'getCount'
+1468059727938	Extract method 'manageTwitterUser'
+1468063774920	Change method 'initializeBarToZero'
+1468065958947	Infer generic type arguments

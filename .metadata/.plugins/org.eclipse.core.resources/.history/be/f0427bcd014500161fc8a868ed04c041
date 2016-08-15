@@ -1,0 +1,6 @@
+package com.java.tutorial.Java8Tutorial;
+
+public @interface Hints {
+	Hint[] value();
+
+}

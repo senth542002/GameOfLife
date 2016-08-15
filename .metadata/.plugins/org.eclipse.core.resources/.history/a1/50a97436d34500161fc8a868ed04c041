@@ -1,0 +1,96 @@
+package com.java.tutorial.Java8Tutorial;
+
+import static org.junit.Assert.*;
+
+import java.time.LocalTime;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+import org.junit.Test;
+
+import com.java.tutorial.Practice.Mood;
+import com.java.tutorial.Practice.TwitterUser;
+
+public class TwitterLeaderBoard {
+
+	final Map<String, TwitterUser> allTwitterUsers = new HashMap<>();
+	
+	@Test
+	public void conventionalApproachUsingNullChecks() {
+		String twitterHandle = "";
+		TwitterUser twitterUser = manageTwitterUser(twitterHandle);
+		twitterUser.incrementCount();
+		allTwitterUsers.values().stream()
+		.sorted(new Comparator<TwitterUser>() {
+
+			@Override
+			public int compare(TwitterUser o1, TwitterUser o2) {
+				return o2.getNumberOfTweets() - o1.getNumberOfTweets();
+			}
+			
+		}).limit(10)
+		.collect(Collectors.toList());
+		
+		int currentMinute = LocalTime.now().getMinute();
+		for(int i=currentMinute; i< currentMinute+20 ; i++) {
+			initializeBarToZero(i);
+		}
+	}
+
+	private void initializeBarToZero(Integer minute) {
+		System.out.println("Initializing the bar to zero");
+	}
+
+	public TwitterUser manageTwitterUser(String twitterHandle) {
+		TwitterUser twitterUser = allTwitterUsers.get(twitterHandle );
+		if(twitterUser == null) {
+			twitterUser = new TwitterUser(twitterHandle);
+			allTwitterUsers.put(twitterHandle, twitterUser);
+		}
+		return twitterUser;
+	}
+	
+	@Test
+	public void usingMethodExpressionInMapForAboveCode() throws Exception {
+		String twitterHandle = "";
+		TwitterUser twitterUser = allTwitterUsers.computeIfAbsent(twitterHandle,TwitterUser::new);
+		twitterUser.incrementCount();
+		allTwitterUsers.values().stream()
+			.sorted(Comparator.comparingInt(TwitterUser::getNumberOfTweets).reversed())
+			.limit(10)
+			.collect(Collectors.toList());
+		
+		int currentMinute = LocalTime.now().getMinute();
+		IntStream.range(currentMinute, currentMinute + 10).forEach(value -> initializeBarToZero(value));
+		
+	}
+	@Test
+	public void creatingOutOwnStream() throws Exception {
+		int currentMinute = LocalTime.now().getMinute();
+		System.out.println("Current Minute: "+currentMinute);
+		//IntStream.range(currentMinute, currentMinute + 10).forEach(value -> initializeBarToZero(value));
+		IntStream.range(0, 10).forEach(this::initializeBarToZero);
+	}
+	
+	@Test
+	public void findingTheMoodOfTwitterUserFromASentence() throws Exception {
+		
+		Map<String,Enum> keyWords = new HashMap<>();
+		keyWords.put("happy", Mood.Happy);
+		keyWords.put("fantastic", Mood.Happy);
+		keyWords.put("awesome", Mood.Happy);
+		keyWords.put("sad", Mood.Sad);
+		keyWords.put("terrible", Mood.Sad);
+		keyWords.put("sucks", Mood.Sad);
+		
+		String twitterMessage = "Yesterday I was sad sad sad, but today is awesome";
+		String output = Stream.of(twitterMessage.split("\\s+ ")).collect(Collectors.joining(","));
+		System.out.println(output);
+	}
+
+}

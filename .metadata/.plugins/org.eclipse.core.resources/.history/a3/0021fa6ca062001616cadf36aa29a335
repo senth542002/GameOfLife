@@ -1,0 +1,19 @@
+package com.java.game;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class GameOfLifeAndDeath 
+{
+    @Test
+	public void SingleCellUniverse() throws Exception {
+    	Cell[][] grid = new Cell[1][1];
+    	for(int i=0; i< grid.length; i++ ){
+    		grid[i][i] = new Cell(true);
+    	}
+		Universe universe = new Universe(grid);
+		Cell[][] gridStatus = universe.applyRule();
+		assertTrue('X'==gridStatus[0][0]);
+	}
+}

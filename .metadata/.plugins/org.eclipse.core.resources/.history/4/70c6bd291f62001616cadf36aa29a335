@@ -1,0 +1,17 @@
+package com.java.game;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class GameOfLifeAndDeath 
+{
+    @Test
+	public void SingleCellUniverse() throws Exception {
+    	Integer[][] grid = new Integer[1][1];
+    	
+		Universe universe = new Universe(2);
+		boolean cellStatus = universe.applyRule();
+		assertTrue(cellStatus);
+	}
+}

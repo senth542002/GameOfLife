@@ -1,0 +1,394 @@
+package com.java.tutorial.Java8Tutorial;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.time.Clock;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class LearningJava8Features {
+	
+	static String staticVariable;
+	String instanceVariable;
+	List<String> stringCollection = new ArrayList<String>();
+	
+	@Before
+	public void initialize() {
+		stringCollection.add("ddd2");
+		stringCollection.add("aaa2");
+		stringCollection.add("bbb1");
+		stringCollection.add("aaa1");
+		stringCollection.add("bbb3");
+		stringCollection.add("ccc");
+		stringCollection.add("bbb2");
+		stringCollection.add("ddd1");
+		
+	}
+	
+	@Test
+	public void defaultMethodsForInterfaces() {
+		Formula formula = new Formula() {
+
+			@Override
+			public Double calculate(int value) {
+				return sqrt(100 * value);
+			}
+
+		};
+		Double squareRootValue = formula.sqrt(16);
+		System.out.println("Squareroot values: " + squareRootValue);
+		assertEquals(new Double(4), squareRootValue);
+
+		Double calculatedValue = formula.calculate(100);
+		System.out.println("calculated value: " + calculatedValue);
+		assertEquals(new Double(100), calculatedValue);
+	}
+
+	@Test
+	public void sortingAListUsingConventionalWay() throws Exception {
+		List<String> names = (List<String>) Arrays.asList("senthil", "arun", "veera", "kumar", "madhavan", "raghavan",
+				"senthil", "arun", "veera");
+		Collections.sort(names);
+		System.out.println(names);
+	}
+
+	@Test
+	public void sortingAListByOveridingComparator() throws Exception {
+		List<String> names = (List<String>) Arrays.asList("senthil", "arun", "veera", "kumar", "madhavan", "raghavan",
+				"senthil", "arun", "veera");
+		Collections.sort(names, new Comparator<String>() {
+
+			@Override
+			public int compare(String a, String b) {
+				return a.compareTo(b);
+			}
+		});
+
+		System.out.println(names);
+	}
+
+	@Test
+	public void sortingAListUsingLambdaExpressions() throws Exception {
+		List<String> names = (List<String>) Arrays.asList("senthil", "arun", "veera", "kumar", "madhavan", "raghavan",
+				"senthil", "arun", "veera");
+		Collections.sort(names, (a, b) -> a.compareTo(b));
+		System.out.println(names);
+	}
+
+	/*
+	 * @Test public void usingLambdasForFormulaInterface() {
+	 * 
+	 * 
+	 * Formula formula = new Formula(){
+	 * 
+	 * @Override public Double calculate(int value) { return sqrt(100 * value);
+	 * }
+	 * 
+	 * }; Double squareRootValue = formula.sqrt(16); System.out.println(
+	 * "Squareroot values: "+squareRootValue); assertEquals(new Double(4),
+	 * squareRootValue);
+	 * 
+	 * Double calculatedValue = formula.calculate(100); System.out.println(
+	 * "calculated value: "+calculatedValue); assertEquals(new Double(100),
+	 * calculatedValue ); }
+	 */
+
+	@Test
+	public void testingLambdaForAbstractClassesNotPossible() throws Exception {
+		
+		//AbstractClassExample abstractClassExample = (a,b) -> a + b;
+		AbstractClassExample abstractClass = new AbstractClassExample() {
+
+			@Override
+			int addition(int a, int b) {
+				return a + b;
+			}
+		};
+
+		System.out.println(abstractClass.multiplication(2, 2));
+	}
+	
+	@Test
+	public void implementingLambdaForFunctionalInterfaces() throws Exception {
+		FunctionalInterfaceExample functionalInterface = (a,b) -> a + b;
+
+		System.out.println("Multiplication output: "+functionalInterface.multiplication(2, 2));
+		System.out.println("Addition output: "+functionalInterface.addition(2, 4));
+	}
+	
+	@Test
+	public void implementingLambdaForFunctionalInterfaceStaticMethodReferences() throws Exception {
+		Convertor<Integer,String> convertor = (value) -> Integer.valueOf(value);
+		Convertor<Integer,String> simplifiedconvertor = Integer::valueOf;
+		System.out.println("Integer Value of '32' is: "+convertor.convert("32"));
+		System.out.println("Integer Value of \"45\" is: "+simplifiedconvertor.convert("45"));
+	}
+	
+	@Test
+	public void implementingLambdaForNormalMethodReferences() throws Exception {
+		Something something = new Something();
+		Convertor<String,String> converter = something::startWith;
+		System.out.println("First Charecter of the String Java is "+converter.convert("Java"));
+	}
+	
+	@Test
+	public void implementingLambdaForConstructorReference() throws Exception {
+		StudentFactory<Student> studentFactory = Student::new;
+		Student student = studentFactory.create("Senthilkumar", "Vedachalam");
+		System.out.println("FirstName: "+student.getFirstName()+" LastName: "+student.getLastName());
+	}
+	
+	@Test
+	public void accessingLocalVariablesInLambda() throws Exception {
+		String additionalValue = "42";
+		Convertor<Integer,String> convertor = (value) -> Integer.valueOf(value+additionalValue);
+		System.out.println("Integer Value of '3242' is: "+convertor.convert("32"));
+		assertTrue(3242 == convertor.convert("32"));
+	}
+	
+	@Test
+	public void cannotModifyTheValueOfVariableUsedInLambda() throws Exception {
+		String additionalValue = "42";
+		Convertor<Integer,String> convertor = (value) -> Integer.valueOf(value+additionalValue);
+		//additionalValue = "53";
+		System.out.println("Integer Value of '3242' is: "+convertor.convert("32"));
+		assertTrue(3242 == convertor.convert("32"));
+	}
+	
+	@Test
+	public void ValueOFStaticOrInstanceVariableCanBeModifiedInLambda() throws Exception {
+		Convertor<Integer,String> convertor = (value) -> Integer.valueOf(value+instanceVariable);
+		instanceVariable = "53";
+		System.out.println("Integer Value of '3253' is: "+convertor.convert("32"));
+		assertTrue(3253 == convertor.convert("32"));
+		convertor =  (value) -> Integer.valueOf(value+staticVariable);
+		staticVariable = "63";
+		assertTrue(3263 == convertor.convert("32"));
+	}
+	
+	@Test
+	public void predicateUsageInLambdaExpression() throws Exception {
+		Predicate<String>  stringPredicate = (s) -> s.length() > 0;
+		System.out.println(stringPredicate.test("String"));
+		System.out.println(stringPredicate.negate().test("String"));
+		Predicate<Boolean> nonNull = Objects::nonNull;
+		System.out.println(nonNull.test(false));
+		Predicate<Boolean> isNull = Objects::isNull;
+		System.out.println(isNull.test(true));
+		Predicate<String> isEmpty = String::isEmpty;
+		System.out.println(isEmpty.test(""));
+		Predicate<String> isNotEmpty = isEmpty.negate();
+		System.out.println(isNotEmpty.test(""));
+	}
+	
+	@Test
+	public void functionsUsageInLambdaExpression() throws Exception {
+		Function<String, Integer> toInteger = Integer::valueOf;
+		Function<String, String> backToString = toInteger.andThen(String::valueOf);
+		assertEquals("1234", backToString.apply("1234"));
+	}
+	
+	@Test
+	public void suppliersUsageInLambdaExpression() throws Exception {
+		Supplier<Student> studentSupplier = Student::new;
+		assertEquals(new Student(), studentSupplier.get());
+	}
+	
+	@Test
+	public void consumersUsageInLambdaExpression() throws Exception {
+		Consumer<Student> greeter = (s) -> System.out.println("Hello, "+s.getFirstName());
+		StudentFactory<Student> studentFactory = Student::new;
+		Student student = studentFactory.create("Senthilkumar", "Vedachalam");
+		greeter.accept(student);
+		assertEquals(new Student("Senthilkumar", "Vedachalam"), student);
+	}
+	
+	@Test
+	public void comparatorsUsageInLambdaExpression() throws Exception {
+		Comparator<Student> comparator = (s1, s2) -> s1.getFirstName().compareTo(s2.getFirstName());
+		Student s1 = new Student("Senthil", "Kumar");
+		Student s2 = new Student("Arun", "Kumar");
+		
+		Consumer<Integer> value = (val) -> System.out.println("Compared Values is "+val);
+		value.accept(comparator.compare(s1, s2));
+		value.accept(comparator.reversed().compare(s1, s2));
+		
+		/*Consumer<Integer> valueCondition = (val) -> System.out.println("The Condition is "+val);
+		Predicate<Boolean> predicate = (value) -> (value != null) && (value > 0);
+		value.accept(comparator.compare(s1, s2));
+		value.accept(comparator.reversed().compare(s1, s2));*/
+		
+	}
+	
+	@Test
+	public void optionalsUsageInLambdaExpression() throws Exception {
+		Optional<Integer> optional1 = Optional.of(20);
+		assertTrue(optional1.isPresent());
+		
+		Consumer<Integer> value = (val) -> System.out.println("Optional is "+val);
+		optional1.ifPresent(value);
+		Optional<Integer> optional2 = Optional.ofNullable(null);
+		
+		value.accept(optional2.orElse(new Integer(0)));				
+		optional2.ifPresent(value);
+	}
+	
+	@Test
+	public void sequentialExecutionOfStreamUsingFilter() throws Exception {
+		
+		stringCollection.stream()
+		.filter((s) -> s.startsWith("a"))
+		.forEach(System.out::println);
+	}
+	
+
+	@Test
+	public void sequentialExecutionOfStreamUsingSorted() throws Exception {
+		
+		stringCollection.stream()
+		.sorted()
+		.filter((s) -> s.startsWith("b"))
+		.forEach(System.out::println);
+	}
+	
+	@Test
+	public void sequentialExecutionOfStreamUsingMap() throws Exception {
+		
+		stringCollection.stream()
+		.map(String::toUpperCase)
+		.sorted((a,b) -> b.compareTo(a))
+		.forEach(System.out::println);
+	}
+	
+	@Test
+	public void sequentialExecutionOfStreamUsingMatch() throws Exception {
+		
+		boolean anyStringStartingWithA = stringCollection.stream()
+		.anyMatch((s) -> s.startsWith("a"));
+		System.out.println("Does any String values start with A? Ans: "+ anyStringStartingWithA);
+		
+		anyStringStartingWithA = stringCollection.stream()
+				.allMatch((s) -> s.startsWith("a"));
+		System.out.println("Does all String values start with A? Ans: "+ anyStringStartingWithA);
+		
+		anyStringStartingWithA = stringCollection.stream()
+				.noneMatch((s) -> s.startsWith("z"));
+		System.out.println("Does none of String values start with Z? Ans: "+ anyStringStartingWithA);
+	}
+
+	@Test
+	public void sequentialExecutionOfStreamUsingCount() throws Exception {
+		
+		long stratsWithB = stringCollection.stream()
+				.filter((s) -> s.startsWith("b"))
+				.count();
+		System.out.println("Count of strings starting with B: "+stratsWithB);
+	}
+	
+	@Test
+	public void sequentialExecutionOfStreamUsingReduce() throws Exception {
+		
+		Optional<String> reduced = stringCollection.stream()
+				.sorted()
+				.reduce((s1,s2) -> s1+"#"+s2 );
+		reduced.ifPresent(System.out::println);
+	}
+	
+	@Test
+	public void parallelExecutionOfStream() throws Exception {
+		
+		int max = 1000000;
+		List<String> values = new ArrayList<String>(max);
+		for(int i=0; i<max; i++) {
+			UUID uuid = UUID.randomUUID();
+			values.add(uuid.toString());
+		}
+		
+		long t0 = System.nanoTime();
+		long count = values.stream().sorted().count();
+		long t1 = System.nanoTime();
+		
+		long millis = TimeUnit.NANOSECONDS.toMillis(t1 - t0);
+		System.out.println(String.format("sequential sort took: %d ms", millis));
+		
+		t0 = System.nanoTime();
+		count = values.parallelStream().sorted().count();
+		t1 = System.nanoTime();
+		millis = TimeUnit.NANOSECONDS.toMillis(t1 - t0);
+		System.out.println(String.format("parallel sort took: %d ms", millis));
+	}
+	
+	@Test
+	public void additinalFeaturesOfMapsInJava8() throws Exception {
+		Map<Integer,String> map = new HashMap<>();
+		for(int i=0; i< 10; i++) {
+			map.putIfAbsent(i, "var"+i);
+		}
+		
+		map.forEach((key, value) -> System.out.println(value));
+		
+		map.computeIfPresent(3, (key,val) -> val+key);
+		System.out.println(map.get(3));
+		
+		map.computeIfPresent(11, (key,val) -> null);
+		assertTrue(!map.containsKey(11));
+		
+		map.computeIfAbsent(23, num -> "val" + num);
+		assertTrue(map.containsKey(23));    // true
+
+		map.computeIfAbsent(3, num -> "bam");
+		assertEquals("var33", map.get(3));  
+		
+		map.remove(3, "var3");
+		System.out.println(map.get(3));             // val33
+
+		map.remove(3, "var33");
+		System.out.println(map.get(3)); 
+		
+		System.out.println(map.getOrDefault(42, "Not Found"));
+		map.merge(9, "val9", (val,newValue) -> val.concat(newValue));
+		System.out.println(map.getOrDefault(9, "Not Found"));
+		
+		map.merge(9, "concat", (value, newValue) -> value.concat(newValue));
+		System.out.println(map.getOrDefault(9, "Not Found"));
+	}
+	
+	@Test
+	public void clocksUsageInJava8() throws Exception {
+		Clock clock = Clock.systemDefaultZone();
+		long millis = clock.millis();
+		System.out.println("Clock Time in milliseconds "+clock.toString());
+		
+		Instant instant = clock.instant();
+		Date legacyDate = (Date) Date.from(instant);
+		System.out.println("Legacy Date "+legacyDate);
+		
+	}
+	
+	@Test
+	public void timeZoneUsageInJava8() throws Exception {
+		System.out.println(ZoneId.getAvailableZoneIds());
+		
+		ZoneId zoneId = ZoneId.of("Europe/Berlin");
+	}
+}

@@ -1,0 +1,63 @@
+package com.java.game;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
+import org.junit.Test;
+
+public class GameOfLifeAndDeath 
+{
+    @Test
+	public void SingleCellUniverse() throws Exception {
+    	Cell[][] grid = new Cell[1][1];
+    	for(int i=0; i< grid.length; i++ ){
+    		for(int j=0; j<grid.length; j++) {
+    			grid[i][j] = new Cell(true);
+    		}
+    	}
+		Universe universe = new Universe(grid);
+		Cell[][] gridStatus = universe.applyRule();
+		assertTrue(true==gridStatus[0][0].isAlive());
+	}
+    
+    @Test
+	public void TwoCellUniverse() throws Exception {
+    	Cell[][] grid = new Cell[2][2];
+    	for(int i=0; i< grid.length; i++ ){
+    		for(int j=0; j<grid.length; j++) {
+    			grid[i][j] = new Cell(true);
+    		}
+    	}
+    	Universe universe = new Universe(grid);
+		Cell[][] gridStatus = universe.applyRule();
+		assertTrue(true==gridStatus[0][0].isAlive());
+		assertTrue(true==gridStatus[0][1].isAlive());
+		assertTrue(true==gridStatus[1][0].isAlive());
+		assertTrue(true==gridStatus[1][1].isAlive());
+	}
+    
+    @Test
+	public void identifiesNeighbouringCellValuesForTwoByTwoUniverse() throws Exception {
+    	Cell[][] grid = new Cell[2][2];
+    	for(int i=0; i< grid.length; i++ ){
+    		for(int j=0; j<grid.length; j++) {
+    			grid[i][j] = new Cell(true);
+    		}
+    	}
+    	Universe universe = new Universe(grid);
+    	universe.identifyNeighbourCells(grid);
+	}
+    
+    @Test
+   	public void identifiesNeighbouringCellValuesForThreeByThreeUniverse() throws Exception {
+       	Cell[][] grid = new Cell[3][3];
+       	for(int i=0; i< grid.length; i++ ){
+       		for(int j=0; j<grid.length; j++) {
+       			grid[i][j] = new Cell(true);
+       		}
+       	}
+       	Universe universe = new Universe(grid);
+       	universe.identifyNeighbourCells(grid);
+   	}
+}

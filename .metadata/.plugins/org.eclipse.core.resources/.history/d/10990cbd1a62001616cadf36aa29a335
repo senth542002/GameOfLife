@@ -1,0 +1,13 @@
+package com.java.game;
+
+public class Universe {
+
+	public Universe(int size) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public boolean initializeSeed(int size) {
+		return false;
+	}
+
+}

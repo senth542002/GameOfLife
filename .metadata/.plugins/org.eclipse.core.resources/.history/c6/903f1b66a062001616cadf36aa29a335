@@ -1,0 +1,16 @@
+package com.java.game;
+
+/**
+ * Hello world!
+ *
+ */
+public class Cell 
+{
+	private Boolean isAlive;
+
+	public Cell(Boolean alive) {
+		this.isAlive = alive;
+	}
+	
+	
+}

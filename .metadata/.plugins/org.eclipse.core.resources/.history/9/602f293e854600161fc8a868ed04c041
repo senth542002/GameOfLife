@@ -1,0 +1,15 @@
+package com.java.dojo.CyberDojo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class HikingTheDoors {
+
+	@Test
+	public void hikerVisitsAllTheDoors() {
+		boolean doorsPosition = false;
+		assertTrue(doorsPosition);
+	}
+
+}

@@ -1,0 +1,48 @@
+package com.java.game;
+
+import java.util.List;
+
+public class Universe {
+	
+	private Cell[][] grid;
+	
+	public Universe(Cell[][] grid) {
+		this.grid = grid;
+	}
+
+	public Cell[][] applyRule() {
+		//List<Cell> neighbourCells = identifyNeighbourCells(grid, grid[0][0]);
+		return this.grid;
+	}
+
+	public void identifyNeighbourCells(Cell[][] grid) {
+		for(int i=0; i< grid.length; i++){
+			for(int j=0; j< grid.length; j++){
+				System.out.println("Neighbours for the Cell "+i+","+j);
+				if(j< grid.length){
+					System.out.println("NothNeighbour Value"+grid[i][j+1].isAlive());
+				}
+				if(i < grid.length){
+					System.out.println("EastNeighbour Value"+grid[i+1][j].isAlive());
+				}
+				if(i < grid.length && j< grid.length ){
+					
+					System.out.println("NorthEastNeighbour Value"+grid[i+1][j+1].isAlive());
+				}
+				
+				if(j>0){
+					System.out.println("SouthEastNeighbour Value"+grid[i+1][j-1].isAlive());
+					System.out.println("SouthNeighbour Value"+grid[i][j-1].isAlive());
+				}
+				if(i>0){
+					System.out.println("WestNeighbour Value"+grid[i-1][j].isAlive());
+					System.out.println("NorthWestNeighbour Value"+grid[i-1][j+1].isAlive());
+				}
+				if(i>0 && j>0){					
+					System.out.println("SouthWestNeighbour Value"+grid[i-1][j-1].isAlive());
+				}
+			}
+		}
+	}
+	
+}

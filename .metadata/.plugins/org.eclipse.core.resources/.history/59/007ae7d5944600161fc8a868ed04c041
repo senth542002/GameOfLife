@@ -1,0 +1,25 @@
+package com.java.dojo.CyberDojo;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.IntStream;
+
+public class HikerGame {
+	
+	Map<Integer, Boolean> doors;
+	
+	public HikerGame() {
+		this.doors = new HashMap<Integer, Boolean>();
+		int i=0;
+		IntStream.range(i,i+10).forEach((k,v) -> k=i, v=false).
+		doors.forEach((k,v) -> v = false);
+	}
+
+	public Map<Integer, Boolean> startThePasses() {
+		doors.forEach((k,v) -> v=true);
+		return doors;
+	}
+	
+	
+
+}

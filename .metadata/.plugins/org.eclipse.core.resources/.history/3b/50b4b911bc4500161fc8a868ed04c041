@@ -1,0 +1,13 @@
+package com.java.tutorial.Practice;
+
+public class TwitterUser {
+	
+	String twitterHandle;
+
+	public TwitterUser(String twitterHandle) {
+		this.twitterHandle = twitterHandle;
+	}
+	
+	
+
+}

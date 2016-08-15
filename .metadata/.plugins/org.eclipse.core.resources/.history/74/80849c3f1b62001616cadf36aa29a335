@@ -1,0 +1,15 @@
+package com.java.game;
+
+public class Universe {
+	
+	private int[][] grid;
+
+	public Universe(int size) {
+		
+	}
+
+	public boolean initializeSeed(int size) {
+		return false;
+	}
+
+}

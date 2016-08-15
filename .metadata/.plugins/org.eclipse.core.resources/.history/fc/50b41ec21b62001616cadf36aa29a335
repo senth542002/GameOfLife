@@ -1,0 +1,15 @@
+package com.java.game;
+
+public class Universe {
+	
+	private Integer[][] grid;
+
+	public Universe(int size) {
+		grid = new Integer[size][size];
+	}
+
+	public boolean applyRule() {
+		return this.grid;
+	}
+	
+}

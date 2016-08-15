@@ -1,0 +1,19 @@
+package com.java.game;
+
+public class Universe {
+	
+	private Integer[][] grid;
+	
+	private void initializeGrid(){
+		
+	}
+
+	public Universe(int size) {
+		grid = new Integer[size][size];
+	}
+
+	public Integer[][] applyRule() {
+		return this.grid;
+	}
+	
+}

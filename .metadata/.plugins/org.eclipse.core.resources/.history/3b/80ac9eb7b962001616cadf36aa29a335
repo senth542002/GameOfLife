@@ -1,0 +1,41 @@
+package com.java.game;
+
+import java.util.List;
+
+public class Universe {
+	
+	private Cell[][] grid;
+	
+	public Universe(Cell[][] grid) {
+		this.grid = grid;
+	}
+
+	public Cell[][] applyRule() {
+		//List<Cell> neighbourCells = identifyNeighbourCells(grid, grid[0][0]);
+		return this.grid;
+	}
+
+	public void identifyNeighbourCells(Cell[][] grid) {
+		for(int i=0; i< grid.length; i++){
+			for(int j=0; j< grid.length; j++){
+				Cell northNeighbour = grid[i][j+1];
+				Cell northEastNeighbour = grid[i+1][j+1];
+				Cell eastNeighbour = grid[i+1][j];
+				if(j>0){
+					Cell southEastNeighbour = grid[i+1][j-1];
+					Cell southNeighbour = grid[i][j-1];
+				}
+				if(i>0){
+					
+					Cell westNeighbour = grid[i-1][j];
+					Cell northWestNeighbour = grid[i-1][j+1];
+				}
+				if(i>0 && j>0){					
+					Cell southWestNeighbour = grid[i-1][j-1];
+				}
+			}
+		}
+		return null;
+	}
+	
+}

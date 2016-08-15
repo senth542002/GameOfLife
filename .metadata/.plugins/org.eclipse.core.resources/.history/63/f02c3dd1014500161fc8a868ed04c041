@@ -1,0 +1,10 @@
+package com.java.tutorial.Java8Tutorial;
+
+public @interface Hints {
+	Hint[] value();
+
+}
+
+@interface Hint{
+	String value;
+}

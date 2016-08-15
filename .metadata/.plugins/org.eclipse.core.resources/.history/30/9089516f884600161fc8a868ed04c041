@@ -1,0 +1,20 @@
+package com.java.dojo.CyberDojo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HikerGame {
+	
+	Map<Integer, Boolean> doors;
+	
+	public HikerGame() {
+		this.doors = new HashMap<Integer, Boolean>();
+	}
+
+	public Map<Integer, Boolean> startThePasses() {
+		return null;
+	}
+	
+	
+
+}

@@ -1,0 +1,7 @@
+package com.java.dojo.CyberDojo;
+
+import junit.framework.TestCase;
+
+public class HikerTest extends TestCase {
+
+}

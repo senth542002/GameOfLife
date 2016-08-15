@@ -1,0 +1,13 @@
+package com.java.game;
+
+public class Universe {
+
+	public Universe(int size) {
+		
+	}
+
+	public boolean initializeSeed(int size) {
+		return false;
+	}
+
+}

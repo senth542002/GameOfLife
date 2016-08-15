@@ -1,0 +1,16 @@
+package com.java.tutorial.Practice;
+
+public class TwitterUser {
+	
+	String twitterHandle;
+	Integer count;
+
+	public TwitterUser(String twitterHandle) {
+		this.twitterHandle = twitterHandle;
+	}
+	
+	public void incrementCount(){
+		count++;
+	}
+
+}

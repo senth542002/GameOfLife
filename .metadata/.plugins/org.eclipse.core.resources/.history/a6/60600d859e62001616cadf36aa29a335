@@ -1,0 +1,13 @@
+package com.java.game;
+
+/**
+ * Hello world!
+ *
+ */
+public class Cell 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}

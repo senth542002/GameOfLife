@@ -1,0 +1,15 @@
+package com.java.game;
+
+public class Universe {
+	
+	private Cell[][] grid;
+	
+	public Universe(Cell[][] grid) {
+		this.grid = grid;
+	}
+
+	public char[][] applyRule() {
+		return this.grid;
+	}
+	
+}

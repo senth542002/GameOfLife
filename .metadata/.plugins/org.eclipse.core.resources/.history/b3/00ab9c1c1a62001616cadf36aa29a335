@@ -1,0 +1,9 @@
+package com.java.game;
+
+public class Universe {
+
+	public boolean initializeSeed(int i) {
+		return false;
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.java.dojo.CyberDojo;
+
+import java.util.Map;
+
+public class HikerGame {
+
+	public Map<Integer, Boolean> startThePasses() {
+		return null;
+	}
+	
+	
+
+}

@@ -1,0 +1,17 @@
+package com.java.tutorial.Java8Tutorial;
+
+@FunctionalInterface
+public interface FunctionalInterfaceExample {
+	
+	Integer addition(int a, int b);
+	
+	default Integer subtraction(int a, int b){
+		return a-b;
+	}
+
+	default Integer multiplication(int a, int b){
+		return a*b;
+	}
+	
+	//Double division(int a, int b);
+}

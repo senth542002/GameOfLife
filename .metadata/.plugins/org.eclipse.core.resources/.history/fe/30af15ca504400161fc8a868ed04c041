@@ -1,0 +1,5 @@
+package com.java.tutorial.Java8Tutorial;
+@FunctionalInterface
+public interface Convertor {
+	Integer convert(String from);
+}
