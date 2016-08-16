@@ -5833,3 +5833,91 @@ org.eclipse.core.runtime.CoreException: Launch configuration TwitterLeaderBoard.
 2016-08-15 17:58:56,327 [Worker-279] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
 2016-08-15 17:58:56,328 [Worker-279] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2016-08-15 17:58:56,328 [Worker-279] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 21:51:42,321 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:51:42,342 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 21:51:42,343 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:51:42,343 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 21:51:55,993 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:51:56,009 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 21:51:56,010 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:51:56,010 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 21:52:03,259 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:52:03,260 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 21:52:03,262 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:52:03,262 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 21:52:11,868 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:52:11,909 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 21:52:11,910 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:52:11,910 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 21:52:17,313 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:52:17,313 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 21:52:17,314 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:52:17,314 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 21:52:38,805 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:52:38,820 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 21:52:38,821 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 21:52:38,821 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:03:32,477 [Worker-314] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:03:32,503 [Worker-314] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:03:32,504 [Worker-314] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:03:32,504 [Worker-314] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:03:36,576 [Worker-314] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:03:36,576 [Worker-314] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:03:36,579 [Worker-314] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:03:36,579 [Worker-314] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:04:07,255 [Worker-313] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:04:07,255 [Worker-313] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:04:07,255 [Worker-313] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:04:07,255 [Worker-313] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:04:44,041 [Worker-313] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:04:44,081 [Worker-313] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:04:44,082 [Worker-313] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:04:44,082 [Worker-313] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:04:49,938 [Worker-315] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:04:49,938 [Worker-315] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:04:49,939 [Worker-315] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:04:49,939 [Worker-315] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:37:26,867 [Worker-327] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:37:26,892 [Worker-327] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:37:26,894 [Worker-327] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:37:26,894 [Worker-327] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:38:46,868 [Worker-338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:38:46,882 [Worker-338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:38:46,883 [Worker-338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:38:46,883 [Worker-338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:38:57,773 [Worker-327] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:38:57,793 [Worker-327] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:38:57,794 [Worker-327] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:38:57,794 [Worker-327] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:39:28,449 [Worker-337] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:39:28,471 [Worker-337] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:39:28,472 [Worker-337] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:39:28,472 [Worker-337] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:39:45,708 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:39:45,726 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:39:45,731 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:39:45,731 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:39:56,005 [Worker-338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:39:56,026 [Worker-338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:39:56,028 [Worker-338] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:39:56,028 [Worker-338] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:41:29,478 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:41:29,516 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:41:29,518 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:41:29,518 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:49:47,699 [Worker-343] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:49:47,730 [Worker-343] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:49:47,731 [Worker-343] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:49:47,732 [Worker-343] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:53:19,242 [Worker-345] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:53:19,264 [Worker-345] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:53:19,266 [Worker-345] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:53:19,266 [Worker-345] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:54:58,802 [Worker-350] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:54:58,831 [Worker-350] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:54:58,832 [Worker-350] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:54:58,832 [Worker-350] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
+2016-08-15 22:58:14,837 [Worker-352] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:58:14,866 [Worker-352] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/main/resources
+2016-08-15 22:58:14,867 [Worker-352] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-08-15 22:58:14,867 [Worker-352] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/senthilkumar/Documents/workspace/Java8/GameOfLife/src/test/resources
