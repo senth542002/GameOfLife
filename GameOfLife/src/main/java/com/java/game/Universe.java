@@ -8,25 +8,26 @@ public class Universe {
 	private Cell[][] grid;
 	
 	public Universe(Cell[][] grid) {
-		ModifiedGrid(grid);
+		this.grid = ModifiedGrid(grid);
 		
 	}
 
 	public Cell[][] ModifiedGrid(Cell[][] grid) {
-		this.grid = UniverseUtil.prepareTwoDimentionalUniverseOf(grid.length+2, grid[0].length+2, false);
+		Cell[][] newGrid= UniverseUtil.prepareTwoDimentionalUniverseOf(grid.length+2, grid[0].length+2, false);
 		for(int i=0; i< grid.length; i++){
 			for(int j=0; j< grid[0].length; j++){
-				this.grid[i+1][j+1] = grid[i][j];
+				newGrid[i+1][j+1] = grid[i][j];
 			}
 		}
-		return this.grid;
+		return newGrid;
 	}
 
 	public Cell[][] applyRule() {
 		Cell[][] newGrid = new Cell[grid.length][grid[0].length];
+		Cell[][] modifiedGrid = ModifiedGrid(grid);
 		for(int i=0; i< grid.length; i++) {
 			for(int j=0; j< grid[0].length; j++){	
-				List<Boolean> neighbouringCellsStatus = identifyNeighbourCells(grid, i, j);
+				List<Boolean> neighbouringCellsStatus = identifyNeighbourCells(modifiedGrid, i+1, j+1);
 				newGrid[i][j] = grid[i][j].applyRules(neighbouringCellsStatus, i, j);
 			}
 		}
@@ -37,40 +38,29 @@ public class Universe {
 		List<Boolean> cellNeighboursState = new ArrayList<Boolean>();
 
 		System.out.println("Neighbours for the Cell "+i+","+j);
-		if(j< grid[0].length -1 ){
-			System.out.println("NothNeighbour Value"+grid[i][j+1].isAlive());
-			cellNeighboursState.add(grid[i][j+1].isAlive());
-		}
-		if(i < grid.length -1){
-			System.out.println("EastNeighbour Value"+grid[i+1][j].isAlive());
-			cellNeighboursState.add(grid[i+1][j].isAlive());
-		}
-		if(i < grid.length-1 && j< grid[0].length-1 ){
-			
-			System.out.println("NorthEastNeighbour Value"+grid[i+1][j+1].isAlive());
-			cellNeighboursState.add(grid[i+1][j+1].isAlive());
+		
+		/*cellNeighboursState.add(grid[i][j+1].isAlive());
+		cellNeighboursState.add(grid[i+1][j].isAlive());
+		cellNeighboursState.add(grid[i+1][j+1].isAlive());
+		cellNeighboursState.add(grid[i+1][j-1].isAlive());
+		cellNeighboursState.add(grid[i][j-1].isAlive());
+		cellNeighboursState.add(grid[i-1][j].isAlive());
+		cellNeighboursState.add(grid[i-1][j+1].isAlive());
+		cellNeighboursState.add(grid[i-1][j-1].isAlive());*/
+		
+		for(int a=i-1; a<= i+1; a++){
+			if(a>=0 && a<grid.length){
+				for(int b=j-1; b<= j+1;b++){
+					if(b>=0 && b< this.grid[0].length){
+						if(!(a==i && b== j)){
+							if(grid[a][b].isAlive())
+								cellNeighboursState.add(true);
+						}
+					}
+				}
+			}
 		}
 		
-		if(j>0){
-			if(i < grid.length-1){						
-				System.out.println("SouthEastNeighbour Value"+grid[i+1][j-1].isAlive());
-				cellNeighboursState.add(grid[i+1][j-1].isAlive());
-			}
-			System.out.println("SouthNeighbour Value"+grid[i][j-1].isAlive());
-			cellNeighboursState.add(grid[i][j-1].isAlive());
-		}
-		if(i>0){
-			System.out.println("WestNeighbour Value"+grid[i-1][j].isAlive());
-			cellNeighboursState.add(grid[i-1][j].isAlive());
-			if(j < grid[0].length-1) {						
-				System.out.println("NorthWestNeighbour Value"+grid[i-1][j+1].isAlive());
-				cellNeighboursState.add(grid[i-1][j+1].isAlive());
-			}
-		}
-		if(i>0 && j>0){					
-			System.out.println("SouthWestNeighbour Value"+grid[i-1][j-1].isAlive());
-			cellNeighboursState.add(grid[i-1][j-1].isAlive());
-		}
 		return cellNeighboursState;
 }
 	
